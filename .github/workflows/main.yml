@@ -14,5 +14,5 @@ jobs:
         username: root  
         password: ${{ secrets.CENTOSSSH }}
         port: 3332
-        source: "sand-moon.space/1st/404.html"
+        source: "/"
         target: "/usr/share/nginx/"
