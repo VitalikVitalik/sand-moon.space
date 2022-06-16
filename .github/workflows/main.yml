@@ -16,3 +16,4 @@ jobs:
         port: 3332
         source: "*"
         target: "/usr/share/nginx/"
+ 
