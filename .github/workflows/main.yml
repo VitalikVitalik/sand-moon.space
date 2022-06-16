@@ -14,5 +14,5 @@ jobs:
         username: root  
         password: ${{ secrets.CENTOSSSH }}
         port: 3332
-        source: "tests/a.txt,tests/b.txt"
-        target: "test"
+        source: "sand-moon.space/1st/404.html"
+        target: "/root/"
