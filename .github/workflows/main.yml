@@ -23,5 +23,5 @@ jobs:
         host: sand-moon.space
         username: root
         password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.CENTOSSSH }}
+        port: 3332
         script: whoami
