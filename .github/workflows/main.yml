@@ -16,4 +16,12 @@ jobs:
         port: 3332
         source: "*"
         target: "/usr/share/nginx/"
- 
+        
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: sand-moon.space
+        username: root
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.CENTOSSSH }}
+        script: whoami
