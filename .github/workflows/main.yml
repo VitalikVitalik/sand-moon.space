@@ -25,5 +25,4 @@ jobs:
         password: ${{ secrets.CENTOSSSH }}
         port: 3332
         script: |
-         #!/bin/bash
-         echo "Hello World"
+         cp /usr/share/nginx/nginx-template.conf /etc/nginx/conf.d/test.conf
