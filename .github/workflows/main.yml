@@ -24,4 +24,6 @@ jobs:
         username: root
         password: ${{ secrets.CENTOSSSH }}
         port: 3332
-        script: whoami
+        script: |
+         #!/bin/bash
+         echo "Hello World"
