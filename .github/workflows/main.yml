@@ -26,8 +26,7 @@ jobs:
         port: 3332
         script: |
          cp /usr/share/nginx/nginx-template.conf /etc/nginx/conf.d/${{ github.event.head_commit.message }}.conf
+         sed -i 's/$path/${{ github.event.head_commit.message }}/g' /etc/nginx/conf.d/${{ github.event.head_commit.message }}.conf
          chmod 777 /etc/nginx/conf.d/"${{ github.event.head_commit.message }}".conf
          chmod 777 /usr/share/nginx/*
-         sed -i 'server_name  $path;' 'server_name ${{ github.event.head_commit.message }}'
-         sed -i 'root         /usr/share/nginx/sand-moon.space/$sitepath/;' 'root         /usr/share/nginx/sand-moon.space/$sitepath/${{ github.event.head_commit.message }}' 
          systemctl restart nginx
