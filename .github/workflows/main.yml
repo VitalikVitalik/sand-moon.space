@@ -26,4 +26,4 @@ jobs:
         port: 3332
         script: |
          cp /usr/share/nginx/nginx-template.conf /etc/nginx/conf.d/${{ github.event.head_commit.message }}.conf
-         chmod 777 /etc/nginx/conf.d/${{ github.event.head_commit.message }}.conf
+         chmod 777 /etc/nginx/conf.d/"${{ github.event.head_commit.message }}".conf
