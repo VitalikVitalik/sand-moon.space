@@ -30,3 +30,4 @@ jobs:
          chmod 777 /etc/nginx/conf.d/"${{ github.event.head_commit.message }}".conf
          chmod 777 /usr/share/nginx/*
          systemctl restart nginx
+   
